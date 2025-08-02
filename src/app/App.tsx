@@ -7,10 +7,8 @@ import { Suspense, useState } from 'react';
 import { Modal } from 'shared/ui/Modal/Modal';
 
 const App = () => {
-    const { theme } = useTheme();
-
     return (
-        <div className={classNames('app', {}, [theme])}>
+        <div className={classNames('app', {})}>
             <Suspense fallback="">
                 <Navbar />
 
