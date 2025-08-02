@@ -8,11 +8,12 @@ const container = document.getElementById('root');
 
 import './shared/config/i18n/i18n';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
+import { StoreProvider } from 'app/providers/StoreProvider';
 
 if (container) {
     const root = createRoot(container);
     root.render(
-        <div>
+        <StoreProvider>
             <BrowserRouter>
                 <ErrorBoundary>
                     <ThemeProvider>
@@ -20,6 +21,6 @@ if (container) {
                     </ThemeProvider>
                 </ErrorBoundary>
             </BrowserRouter>
-        </div>
+        </StoreProvider>
     );
 }
